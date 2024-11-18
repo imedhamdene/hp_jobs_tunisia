@@ -1,0 +1,188 @@
+/* General Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+
+/* Ensure the sidebar and main content fit together */
+.sidebar + .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section Styles */
+.section {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Button Styling */
+button, .submit-button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .submit-button:hover {
+    background-color: #555;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Section Cards */
+.add-category-section, .jobs-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Styles */
+.form-label {
+    font-size: 14px;
+    color: #555;
+}
+
+.form-input, .form-textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+/* Jobs Table */
+.jobs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.jobs-table th, .jobs-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.jobs-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.jobs-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.jobs-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Styles for Main Content */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 200px;
+    }
+
+    .form-input, .form-textarea {
+        font-size: 12px;
+    }
+}
+/*******************************************************************************************/
+.form-container {
+    background-color: #fff; /* Slight off-white for a cleaner, softer appearance */
+    padding: 30px; /* Increased padding for a more spacious layout */
+    border-radius: 8px; /* Slightly more rounded corners for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* A stronger shadow for better depth */
+    max-width: 500px; /* Limit the form container's width for more control */
+    margin: 30px auto; /* Centered horizontally with space at the top */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Added gap between form elements for better spacing */
+}
+
+.error {
+    color: #e74c3c; /* Slightly brighter red for better visibility */
+    font-size: 14px; /* Smaller text for error messages */
+    margin-bottom: 20px; /* Increased margin to visually separate errors */
+    font-weight: 600; /* Added bold weight to error messages for emphasis */
+}
+
+.signup-link, .home-link {
+    text-align: center;
+    margin-top: 30px; /* Increased space above links for balance */
+}
+
+.signup-link a, .home-link a {
+    color: #3498db; /* Subtle blue color for links */
+    text-decoration: none;
+    font-weight: 600; /* Bold weight for links for better visibility */
+    font-size: 16px; /* Slightly larger font size for readability */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.signup-link a:hover, .home-link a:hover {
+    color: #e74c3c; /* Change color to red on hover for emphasis */
+    text-decoration: underline;
+}
